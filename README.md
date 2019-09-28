@@ -19,8 +19,12 @@ const bot = botstream({
 });
 
 const echoConvo$ = messageEvent$.pipe(say(ev => `Echo: ${ev.message.text}`));
+const helloConvo$ = event$.pipe(
+    hears(['hello'], 'message'),
+    say('Ok, hello! How can I help you?'),
+);
 
-bot.loadSkills(echoConvo$);
+bot.loadSkills(echoConvo$, helloConvo$);
 ```
 
 ## APIs

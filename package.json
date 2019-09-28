@@ -1,0 +1,32 @@
+{
+  "name": "@leesiongchan/botstream",
+  "description": "Facebook Messenger + RxJS + xstate = botstream",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastify": "^2.8.0",
+    "got": "^9.6.0",
+    "lodash": "^4.17.15",
+    "module-alias": "^2.2.1",
+    "pino": "^5.13.3",
+    "rxjs": "^6.5.3",
+    "xstate": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/got": "^9.6.7",
+    "@types/lodash": "^4.14.138",
+    "@types/module-alias": "^2.0.0",
+    "@types/pino": "^5.8.10",
+    "pino-pretty": "^3.2.1",
+    "prettier": "^1.18.2",
+    "tslib": "^1.10.0",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2"
+  }
+}

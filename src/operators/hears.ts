@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { get } from 'lodash';
 
-import { FacebookMessengerEvent } from '@/utils/facebook-messenger-api-client';
+import { FacebookMessengerEvent } from '../utils/facebook-messenger-api-client';
 
 export function hears<T extends FacebookMessengerEvent>(
   rawKeywords: string | string[],

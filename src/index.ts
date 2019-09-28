@@ -1,5 +1,3 @@
-import './setup';
-
 import botstream from './botstream';
 
 export * from './observables';

@@ -5,7 +5,7 @@ import {
   FacebookMessengerEvent,
   FacebookMessengerMessageEvent,
   FacebookMessengerPostbackEvent,
-} from '@/utils/facebook-messenger-api-client';
+} from '../utils/facebook-messenger-api-client';
 
 export const event$ = new Subject<FacebookMessengerEvent>();
 export const eventReplay$ = event$.pipe(shareReplay(1));

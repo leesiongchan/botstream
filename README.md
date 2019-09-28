@@ -29,6 +29,8 @@ bot.loadSkills(echoConvo$);
 
 -   `botstream(config: BotstreamConfig)`
 -   `loadSkills(skills: Observable[]): void`
+-   `server`
+    A Fastify server.
 
 ### Observables
 

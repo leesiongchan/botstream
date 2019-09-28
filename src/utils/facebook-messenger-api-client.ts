@@ -1,7 +1,7 @@
 import got from 'got';
 
 import logger from './logger';
-import { globalConfig } from '@/botstream';
+import { globalConfig } from '../botstream';
 
 export interface FacebookMessengerMessage {
   text: string;

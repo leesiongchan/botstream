@@ -24,6 +24,7 @@ function botstream(config: BotstreamConfig) {
 
   return {
     loadSkills,
+    server: app,
   };
 }
 

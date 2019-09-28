@@ -1,7 +1,7 @@
 import fastify from 'fastify';
 
-import logger from '@/utils/logger';
-import { event$ } from '@/observables';
+import logger from './utils/logger';
+import { event$ } from './observables';
 import { globalConfig } from './botstream';
 
 const app = fastify({ logger, disableRequestLogging: true });

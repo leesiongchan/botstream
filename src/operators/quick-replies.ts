@@ -2,8 +2,8 @@ import { Observable } from 'rxjs';
 import { filter, mergeMap, switchMap, take } from 'rxjs/operators';
 import { get } from 'lodash';
 
-import { event$ } from '@/observables';
-import { FacebookMessengerEvent, send } from '@/utils/facebook-messenger-api-client';
+import { event$ } from '../observables';
+import { FacebookMessengerEvent, send } from '../utils/facebook-messenger-api-client';
 
 export function sendQuickReplies<T extends FacebookMessengerEvent>(
   messageOrFn: string | ((ev: T) => string),

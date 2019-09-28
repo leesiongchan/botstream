@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
 import { mergeMap } from 'rxjs/operators';
 
-import { FacebookMessengerEvent, send } from '@/utils/facebook-messenger-api-client';
+import { FacebookMessengerEvent, send } from '../utils/facebook-messenger-api-client';
 
 export function say<T extends FacebookMessengerEvent>(
   messageOrFn: string | ((ev: T) => string | Promise<string>),

@@ -9,7 +9,7 @@ WIP
 ## Usage
 
 ```javascript
-import botstream, { messageEvent$ } from 'botstream';
+import botstream, { messageEvent$ } from '@leesiongchan/botstream';
 
 const bot = botstream({
     facebookAccessToken: '1234',

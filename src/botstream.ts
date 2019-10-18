@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
 import { IncomingMessage, Server, ServerResponse } from 'http';
-import { combineLatest, ObservableInput } from 'rxjs';
+import { merge, ObservableInput } from 'rxjs';
 
 interface BotstreamConfig {
   facebookAccessToken: string;
@@ -13,7 +13,7 @@ interface BotstreamConfig {
 export let globalConfig: BotstreamConfig;
 
 function loadSkills<O extends ObservableInput<any>>(...skills: O[]) {
-  combineLatest(...skills).subscribe();
+  merge(...skills).subscribe();
 }
 
 function botstream(config: BotstreamConfig) {

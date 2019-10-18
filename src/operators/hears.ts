@@ -16,7 +16,8 @@ export function hears<T extends FacebookMessengerEvent>(
         } else if (eventType === 'postback' && !ev.postback) {
           return false;
         }
-        const value: string | undefined = get(ev, 'postback.payload') || get(ev, 'message.text');
+        const value: string | undefined =
+          get(ev, 'postback.payload') || get(ev, 'message.quick_reply.payload') || get(ev, 'message.text');
         if (!value) {
           return false;
         }

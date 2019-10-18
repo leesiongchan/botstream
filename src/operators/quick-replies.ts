@@ -3,11 +3,11 @@ import { filter, mergeMap, switchMap, take } from 'rxjs/operators';
 import { get } from 'lodash';
 
 import { event$ } from '../observables';
-import { FacebookMessengerEvent, send } from '../utils/facebook-messenger-api-client';
+import { FacebookMessengerEvent, FacebookQuickReply, send } from '../utils/facebook-messenger-api-client';
 
 export function sendQuickReplies<T extends FacebookMessengerEvent>(
   messageOrFn: string | ((ev: T) => string),
-  quickReplies: any[],
+  quickReplies: FacebookQuickReply[],
 ) {
   return (source: Observable<T>) =>
     source.pipe(

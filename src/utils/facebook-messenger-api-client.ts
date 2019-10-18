@@ -7,6 +7,13 @@ export interface FacebookMessengerMessage {
   text: string;
 }
 
+export interface FacebookQuickReply {
+  content_type: 'text' | 'user_phone_number' | 'user_email';
+  image_url?: string;
+  payload: number | string;
+  title: string;
+}
+
 export interface FacebookMessengerPostbackMessage {
   payload: any;
 }

@@ -1,7 +1,7 @@
 {
   "name": "@leesiongchan/botstream",
   "description": "Facebook Messenger + RxJS + xstate = botstream",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leesiongchan/botstream.git",

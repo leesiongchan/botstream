@@ -1,9 +1,8 @@
 import { Observable } from 'rxjs';
-import { filter, mergeMap, switchMap, take } from 'rxjs/operators';
-import { get } from 'lodash';
+import { first, mergeMap, switchMapTo } from 'rxjs/operators';
 
-import { event$ } from '../observables';
 import { FacebookMessengerEvent, FacebookQuickReply, send } from '../utils/facebook-messenger-api-client';
+import { event$ } from '../observables';
 
 export function sendQuickReplies<T extends FacebookMessengerEvent>(
   messageOrFn: string | ((ev: T) => string),
@@ -19,10 +18,6 @@ export function sendQuickReplies<T extends FacebookMessengerEvent>(
         );
         return quickReplies.map(quickReply => quickReply.payload);
       }),
-      switchMap(quickReplyPayloads => {
-        return event$.pipe(
-          filter(ev => quickReplyPayloads.includes(get(ev, 'message.quick_reply.payload')), take(1)),
-        );
-      }),
+      switchMapTo(event$.pipe(first())),
     );
 }
